@@ -1,0 +1,11 @@
+Conclusiones del ejercicio de automatización Demoblaze
+
+En este ejercicio se implementó un flujo End-to-End de compra utilizando Serenity BDD y el patrón Screenplay, con el objetivo de validar un escenario real de negocio desde la selección de productos hasta la confirmación final de la compra.
+
+Una de las decisiones principales fue separar claramente responsabilidades: las Tasks representan acciones del usuario, las Questions se utilizan únicamente para validar el estado del sistema y los StepDefinitions reflejan la intención del negocio siguiendo un enfoque BDD claro y legible.
+
+Durante la automatización se identificó un comportamiento particular del navegador relacionado con los alerts generados al agregar productos al carrito. Estos alerts no forman parte del negocio, pero bloquean la navegación si no se manejan correctamente. Por esta razón, se decidió implementar un manejo técnico defensivo de los alerts exclusivamente para permitir la continuidad del flujo, sin validarlos como requisito funcional.
+
+El uso del patrón Screenplay permitió construir un código más mantenible, expresivo y fácil de escalar en comparación con enfoques tradicionales. Asimismo, Serenity BDD facilitó la generación de reportes claros y comprensibles para analizar el resultado de la ejecución.
+
+Este ejercicio permitió reforzar buenas prácticas de automatización, como la separación de lógica, la estabilidad frente a comportamientos no deterministas del navegador y la importancia de reflejar correctamente el flujo de negocio en escenarios BDD.

@@ -9,7 +9,7 @@
 
     <!-- Identidad del proyecto -->
     <groupId>serenity-bdd-archetype</groupId>
-    <artifactId>serenity-bdd-archetype</artifactId>
+    <artifactId>demoblaze-serenity-automation</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <!-- Propiedades globales -->
