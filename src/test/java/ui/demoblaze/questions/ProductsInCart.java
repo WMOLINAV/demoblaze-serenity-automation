@@ -1,4 +1,4 @@
-package com.demoblaze.questions;
+package ui.demoblaze.questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Question;
 import java.util.Collection;
 
 import static net.serenitybdd.screenplay.questions.Text.ofEach;
-import static com.demoblaze.userinterfaces.CartPage.PRODUCT_NAMES;
+import static ui.demoblaze.userinterfaces.CartPage.PRODUCT_NAMES;
 
 public class ProductsInCart implements Question<Collection<String>> {
 

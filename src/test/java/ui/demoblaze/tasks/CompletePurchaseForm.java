@@ -1,4 +1,4 @@
-package com.demoblaze.tasks;
+package ui.demoblaze.tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Click;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static com.demoblaze.userinterfaces.OrderForm.*;
+import static ui.demoblaze.userinterfaces.OrderForm.*;
 
 public class CompletePurchaseForm implements Task {
 

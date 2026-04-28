@@ -1,22 +1,24 @@
-package com.demoblaze.tasks;
+package ui.demoblaze.tasks;
 
+import ui.demoblaze.userinterfaces.HomePage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static com.demoblaze.userinterfaces.PurchaseConfirmation.PURCHASE_BUTTON;
 
-public class FinalizePurchase implements Task {
+public class AddProductToCart implements Task {
 
-    public static FinalizePurchase now() {
-        return instrumented(FinalizePurchase.class);
+    public static AddProductToCart now() {
+        return instrumented(AddProductToCart.class);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+
         actor.attemptsTo(
-                Click.on(PURCHASE_BUTTON)
+                Click.on(HomePage.ADD_TO_CART_BUTTON)
         );
+
     }
 }

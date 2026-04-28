@@ -1,37 +1,51 @@
-# DemE Automation – Serenity BDD
+# Demoblaze Automation – Serenity BDD
 
-## Descripción
-Este proyecto implementa un escenario de automatización End‑to‑End para el sitio web https://www.demoblaze.com/, utilizando Serenity BDD con el patrón Screenplay.
+Este repositorio contiene un proyecto de automatización de pruebas que integra
+"pruebas Web" y "pruebas de API" utilizando "Serenity BDD" como framework base.
 
-El objetivo es validar un flujo completo de compra como parte de un ejercicio práctico de QA Automation.
+El objetivo principal es demostrar una estrategia de automatización completa,
+separando correctamente la validación de interfaz gráfica y la validación directa
+de servicios REST.
 
-## Alcance del Escenario Automatizado
-El flujo automatizado cubre los siguientes pasos:
+---
 
-- Acceso al sitio Demoblaze
-- Selección y agregado de dos productos al carrito
-- Visualización del carrito
-- Completar el formulario de compra
-- Finalizar la compra
-- Validar el mensaje de confirmación de la operación
+## 📂 Estructura general del proyecto
 
-## Tecnologías Utilizadas
+demoblaze-serenity-automation/
+├── src/test/java
+│   ├── ui.demoblaze        # Automatización Web (Serenity + Screenplay)
+│   ├── api.demoblaze       # Automatización API (Serenity + RestAssured)
+│
+├── README_WEB.md           # Documentación específica de pruebas Web
+├── README_API.md           # Documentación específica de pruebas API
+├── conclusiones_web.txt    # Conclusiones de automatización Web
+├── conclusiones_api.txt    # Conclusiones del ejercicio de API
+├── pom.xml
+└── .gitignore
+---
+
+## 📘 Documentación específica
+
+- 📄 **Pruebas Web**: ver `README_WEB.md`
+- 📄 **Pruebas API**: ver `README_API.md`
+
+Cada documento detalla el alcance, ejecución y consideraciones de su respectivo tipo de prueba.
+
+---
+
+## 🚀 Tecnologías principales
+
 - Java 17
 - Maven
 - Serenity BDD
-- Cucumber (BDD)
+- Cucumber (solo Web)
+- RestAssured (API)
+- JUnit
 - Selenium WebDriver
-- Patrón Screenplay
 
-## Requisitos Previos
-Para ejecutar el proyecto se requiere:
+---
 
-- Java JDK 17 o superior
-- Maven 3.8 o superior
-- Google Chrome
+## 📊 Reportes
 
-## Ejecución del Proyecto
-Desde la raíz del proyecto, ejecutar el siguiente comando:
-
-```bash
-mvn clean verify
+Luego de la ejecución de las pruebas, los reportes Serenity se encuentran en:
+target/site/serenity/index.html

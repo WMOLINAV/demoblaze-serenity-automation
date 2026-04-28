@@ -1,17 +1,17 @@
-package com.demoblaze.stepdefinitions;
+package ui.demoblaze.stepdefinitions;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.Matchers.equalTo;
 
-import com.demoblaze.questions.PurchaseConfirmationMessage;
-import com.demoblaze.tasks.AddProductToCart;
-import com.demoblaze.tasks.CompletePurchaseForm;
-import com.demoblaze.tasks.FinalizePurchase;
-import com.demoblaze.tasks.NavigateToCart;
-import com.demoblaze.tasks.NavigateToHome;
-import com.demoblaze.tasks.OpenDemoblaze;
-import com.demoblaze.tasks.OpenProductDetail;
-import com.demoblaze.userinterfaces.HomePage;
+import ui.demoblaze.questions.PurchaseConfirmationMessage;
+import ui.demoblaze.tasks.AddProductToCart;
+import ui.demoblaze.tasks.CompletePurchaseForm;
+import ui.demoblaze.tasks.FinalizePurchase;
+import ui.demoblaze.tasks.NavigateToCart;
+import ui.demoblaze.tasks.NavigateToHome;
+import ui.demoblaze.tasks.OpenDemoblaze;
+import ui.demoblaze.tasks.OpenProductDetail;
+import ui.demoblaze.userinterfaces.HomePage;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;

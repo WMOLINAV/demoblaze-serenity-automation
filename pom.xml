@@ -60,6 +60,25 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- ================= API TESTING ================= -->
+
+        <!-- Serenity + RestAssured -->
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-rest-assured</artifactId>
+            <version>4.1.20</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- RestAssured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.4.0</version>
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
 
     <!-- Build -->

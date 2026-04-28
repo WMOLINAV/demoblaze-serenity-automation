@@ -1,4 +1,4 @@
-package com.demoblaze.stepdefinitions;
+package ui.demoblaze.stepdefinitions;
 
 import io.cucumber.java.Before;
 import net.serenitybdd.screenplay.actors.OnStage;

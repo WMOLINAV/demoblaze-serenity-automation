@@ -1,0 +1,16 @@
+
+La automatización de pruebas de API se implementó utilizando Serenity BDD
+integrado con RestAssured, permitiendo validar directamente los servicios REST
+sin depender de la interfaz gráfica.
+
+Se cubrieron los casos solicitados para los servicios de Signup y Login,
+incluyendo escenarios positivos y negativos. Durante la validación se evidenció
+que la API de Demoblaze no sigue estrictamente prácticas REST estándar, ya que
+retorna código HTTP 200 incluso ante errores de negocio y en algunos casos
+respuestas no estructuradas en JSON.
+
+Las pruebas se diseñaron considerando el comportamiento real de la API,
+priorizando la estabilidad y la correcta interpretación de los resultados.
+
+La separación entre pruebas Web y pruebas de API permite una arquitectura
+escalable, clara y alineada con buenas prácticas de automatización.

@@ -1,4 +1,4 @@
-package com.demoblaze.tasks;
+package ui.demoblaze.tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;

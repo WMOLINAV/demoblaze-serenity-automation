@@ -1,4 +1,4 @@
-package com.demoblaze.tasks;
+package ui.demoblaze.tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -8,26 +8,26 @@ import org.openqa.selenium.NoAlertPresentException;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class NavigateToHome implements Task {
+public class NavigateToCart implements Task {
 
-    public static NavigateToHome page() {
-        return instrumented(NavigateToHome.class);
+    public static NavigateToCart page() {
+        return instrumented(NavigateToCart.class);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        // Manejo técnico defensivo del alert (NO es lógica de negocio)
+        // Cierre técnico defensivo del alert (NO es negocio)
         try {
             actor.attemptsTo(
                     Switch.toAlert().andAccept()
             );
         } catch (NoAlertPresentException ignored) {
-            // Si no hay alert, seguimos sin romper el flujo
+            // Si no hay alert, seguimos
         }
 
         actor.attemptsTo(
-                Open.url("https://www.demoblaze.com/")
+                Open.url("https://www.demoblaze.com/cart.html")
         );
     }
 }

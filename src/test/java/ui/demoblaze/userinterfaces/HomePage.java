@@ -1,4 +1,4 @@
-package com.demoblaze.userinterfaces;
+package ui.demoblaze.userinterfaces;
 
 import net.serenitybdd.screenplay.targets.Target;
 
