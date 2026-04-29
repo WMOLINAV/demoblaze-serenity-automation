@@ -22,4 +22,5 @@ jobs:
       - name: SonarCloud scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=WMOLINAV_demoblaze-serenity-automation -Dsonar.organization=wmolinav
+        run: mvn clean verify -DskipTests org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=WMOLINAV_demoblaze-serenity-automation -Dsonar.organization=wmolinav
+
