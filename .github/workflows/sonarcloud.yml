@@ -17,10 +17,11 @@ jobs:
           fetch-depth: 0
 
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@v2
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          args: >
-            -Dsonar.projectKey=WMOLINAV_demoblaze-serenity-automation
-            -Dsonar.organization=wmolinav
+  uses: sonarsource/sonarcloud-github-action@v2
+  env:
+    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    SONAR_ORGANIZATION: wmolinav
+  with:
+    args: >
+      -Dsonar.projectKey=WMOLINAV_demoblaze-serenity-automation
+
