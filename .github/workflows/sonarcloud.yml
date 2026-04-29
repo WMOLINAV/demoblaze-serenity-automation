@@ -20,7 +20,3 @@ jobs:
         uses: sonarsource/sonarcloud-github-action@v2
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_ORGANIZATION: wmolinav
-        with:
-          args: >
-            -Dsonar.projectKey=WMOLINAV_demoblaze-serenity-automation
