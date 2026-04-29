@@ -22,10 +22,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-- name: Build and analyze
+
+name: Build and analyze
   env:
     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-run: |
+  run: mvn verify sonar:sonar -Dsonar.projectKey=WMOLINAV_demoblaze-serenity-automation - D
   mvn verify sonar:sonar \
     -Dsonar.projectKey=WMOLINAV_demoblaze-serenity-automation \
     -Dsonar.organization=wmolinav \
