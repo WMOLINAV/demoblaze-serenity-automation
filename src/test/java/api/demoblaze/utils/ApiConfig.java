@@ -8,12 +8,12 @@ public class ApiConfig {
         RestAssured.baseURI = "https://api.demoblaze.com";
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
 
-
+/**
         public void doSomethingBad() {
             if (true) {
                 System.out.println("This is a dummy code smell");
             }
-        }
+        }*/
 
 
     }
