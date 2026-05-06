@@ -3,10 +3,14 @@ package ui.demoblaze.tasks;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;
-import net.serenitybdd.screenplay.actions.Switch;
-import org.openqa.selenium.NoAlertPresentException;
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
+
+import ui.demoblaze.userinterfaces.CartPage;
+import ui.demoblaze.interactions.AcceptAlertIfPresent;
 
 public class NavigateToCart implements Task {
 
@@ -17,17 +21,12 @@ public class NavigateToCart implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        // Cierre técnico defensivo del alert (NO es negocio)
-        try {
-            actor.attemptsTo(
-                    Switch.toAlert().andAccept()
-            );
-        } catch (NoAlertPresentException ignored) {
-            // Si no hay alert, seguimos
-        }
-
         actor.attemptsTo(
-                Open.url("https://www.demoblaze.com/cart.html")
+                AcceptAlertIfPresent.now(),                 // ✅ limpia alert residual
+                Open.url("https://www.demoblaze.com/cart.html"), // ✅ navega al carrito
+                WaitUntil.the(CartPage.PLACE_ORDER_BUTTON, isVisible())
+                        .forNoMoreThan(10).seconds(),     // ✅ espera DOM
+                Click.on(CartPage.PLACE_ORDER_BUTTON)       // ✅ abre modal
         );
     }
 }

@@ -7,3 +7,6 @@ target/
 
 # OS
 .DS_Store
+# Archivos de instalación local
+*.deb
+

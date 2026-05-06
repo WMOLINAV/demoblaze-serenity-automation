@@ -4,10 +4,6 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class OrderForm {
 
-    public static final Target PLACE_ORDER_BUTTON =
-            Target.the("Place Order button")
-                    .locatedBy("//button[text()='Place Order']");
-
     public static final Target NAME_FIELD =
             Target.the("Name field")
                     .locatedBy("#name");
@@ -21,7 +17,7 @@ public class OrderForm {
                     .locatedBy("#city");
 
     public static final Target CREDIT_CARD_FIELD =
-            Target.the("Credit Card field")
+            Target.the("Credit card field")
                     .locatedBy("#card");
 
     public static final Target MONTH_FIELD =
@@ -31,4 +27,8 @@ public class OrderForm {
     public static final Target YEAR_FIELD =
             Target.the("Year field")
                     .locatedBy("#year");
+
+    public static final Target PURCHASE_BUTTON =
+            Target.the("Purchase button")
+                    .locatedBy("//button[text()='Purchase']");
 }

@@ -3,26 +3,27 @@ package ui.demoblaze.tasks;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.targets.Target;
+
+import ui.demoblaze.userinterfaces.HomePage;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class OpenProductDetail implements Task {
 
-    private final Target product;
+    private final String productName;
 
-    public OpenProductDetail(Target product) {
-        this.product = product;
+    public OpenProductDetail(String productName) {
+        this.productName = productName;
     }
 
-    public static OpenProductDetail of(Target product) {
-        return instrumented(OpenProductDetail.class, product);
+    public static OpenProductDetail of(String productName) {
+        return instrumented(OpenProductDetail.class, productName);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(product)
+                Click.on(HomePage.productLink(productName))
         );
     }
 }
