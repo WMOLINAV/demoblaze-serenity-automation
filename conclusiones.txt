@@ -1,0 +1,29 @@
+Conclusiones – Ejercicio de Automatización WEB
+
+La automatización WEB desarrollada permitió validar correctamente el flujo
+funcional de compra en la aplicación Demoblaze, cubriendo desde la navegación
+inicial hasta la confirmación final de la compra.
+
+Se implementó un enfoque basado en Serenity BDD y el patrón Screenplay,
+logrando una estructura clara, legible y mantenible del proyecto. Las tareas,
+interacciones y preguntas se encuentran correctamente separadas, facilitando
+la comprensión y futura extensión del código.
+
+El escenario automatizado demuestra la correcta interacción con los elementos
+de la interfaz, el llenado del formulario de compra y la finalización del
+proceso, evidenciando el uso adecuado de Selenium WebDriver para la
+automatización de pruebas UI.
+
+Durante la automatización del flujo de compra se identificó la presencia de
+alerts JavaScript generados por la aplicación Demoblaze, los cuales
+interrumpían la ejecución normal de los pasos automatizados.
+
+Para solventar este comportamiento, se implementó una interacción específica
+encargada de detectar y aceptar el alert de forma controlada antes de continuar
+con el siguiente paso del escenario. Esta solución permitió estabilizar la
+ejecución de las pruebas y garantizar la correcta finalización del flujo
+end-to-end.
+
+El manejo explícito del alert demuestra la correcta identificación de un
+problema típico en automatización WEB y la aplicación de una solución alineada
+a buenas prácticas en el uso de Selenium y Serenity BDD.

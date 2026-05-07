@@ -23,7 +23,7 @@ public class CompletePurchaseForm implements Task {
                 WaitUntil.the(OrderForm.NAME_FIELD, isVisible())
                         .forNoMoreThan(10).seconds(),
 
-                Enter.theValue("John Doe").into(OrderForm.NAME_FIELD),
+                Enter.theValue("Wil  Molina").into(OrderForm.NAME_FIELD),
                 Enter.theValue("Ecuador").into(OrderForm.COUNTRY_FIELD),
                 Enter.theValue("Quito").into(OrderForm.CITY_FIELD),
                 Enter.theValue("4111111111111111").into(OrderForm.CREDIT_CARD_FIELD),

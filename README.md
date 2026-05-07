@@ -1,51 +1,42 @@
-# Demoblaze Automation – Serenity BDD
+Proyecto: Automatización de Pruebas WEB – Demoblaze
 
-Este repositorio contiene un proyecto de automatización de pruebas que integra
-"pruebas Web" y "pruebas de API" utilizando "Serenity BDD" como framework base.
+Autor:
+Wilson Molina
 
-El objetivo principal es demostrar una estrategia de automatización completa,
-separando correctamente la validación de interfaz gráfica y la validación directa
-de servicios REST.
+Descripción:
+Este proyecto contiene la automatización de pruebas funcionales WEB sobre la
+aplicación Demoblaze, utilizando el framework Serenity BDD con Cucumber.
 
----
+El objetivo del ejercicio es demostrar conocimientos en automatización de
+pruebas UI, aplicando buenas prácticas de diseño, estructura del proyecto y
+validación de flujos funcionales de negocio.
 
-## 📂 Estructura general del proyecto
 
-demoblaze-serenity-automation/
-├── src/test/java
-│   ├── ui.demoblaze        # Automatización Web (Serenity + Screenplay)
-│   ├── api.demoblaze       # Automatización API (Serenity + RestAssured)
-│
-├── README_WEB.md           # Documentación específica de pruebas Web
-├── README_API.md           # Documentación específica de pruebas API
-├── conclusiones_web.txt    # Conclusiones de automatización Web
-├── conclusiones_api.txt    # Conclusiones del ejercicio de API
-├── pom.xml
-└── .gitignore
----
+Alcance de las pruebas:
+- Navegación a la página principal de Demoblaze
+- Selección de productos
+- Agregado de productos al carrito
+- Navegación al carrito
+- Ejecución del flujo completo de compra
+- Completar formulario de compra
+- Finalizar la compra y validar confirmación
 
-## 📘 Documentación específica
 
-- 📄 **Pruebas Web**: ver `README_WEB.md`
-- 📄 **Pruebas API**: ver `README_API.md`
-
-Cada documento detalla el alcance, ejecución y consideraciones de su respectivo tipo de prueba.
-
----
-
-## 🚀 Tecnologías principales
-
-- Java 17
-- Maven
+Herramientas y tecnologías:
+- Java
 - Serenity BDD
-- Cucumber (solo Web)
-- RestAssured (API)
-- JUnit
+- Cucumber
+- Maven
 - Selenium WebDriver
+- Chrome Browser
 
----
 
-## 📊 Reportes
+Ejecución de las pruebas:
+Las pruebas se ejecutan desde la línea de comandos utilizando Maven:
 
-Luego de la ejecución de las pruebas, los reportes Serenity se encuentran en:
-target/site/serenity/index.html
+mvn clean test
+
+
+Notas:
+- Los datos utilizados en el formulario de compra son ficticios y se emplean
+  únicamente con fines de prueba.
