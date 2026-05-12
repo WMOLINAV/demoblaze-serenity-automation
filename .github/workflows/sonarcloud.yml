@@ -26,5 +26,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://sonarcloud.io
-          SONAR_ORGANIZATION: wmolinav
-        run: mvn clean test-compile sonar:sonar
+        run: >
+          mvn clean test-compile sonar:sonar
+          -Dsonar.organization=wmolinav
+          -Dsonar.projectKey=WMOLINAV_demoblaze-serenity-automation
