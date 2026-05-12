@@ -47,5 +47,12 @@ Cada documento detalla el alcance, ejecución y consideraciones de su respectivo
 
 ## 📊 Reportes
 
-Luego de la ejecución de las pruebas, los reportes Serenity se encuentran en:
+Luego de la ejecución de las pruebas, los reportes Serenity se encuentran en:c
 target/site/serenity/index.html
+
+
+## ✅ SonarCloud CI
+
+Este cambio se realiza para disparar manualmente una nueva
+ejecución del pipeline de SonarCloud desde GitHub Actions.
+
